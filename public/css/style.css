@@ -451,6 +451,10 @@ header .intro-text {
   
 
 }
+#team .team-img {
+  display: block;
+  margin: 0 auto;
+}
 #team .thumbnail {
   background: transparent;
   border: 0;
