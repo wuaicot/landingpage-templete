@@ -441,7 +441,13 @@ header .intro-text {
 /* Team Section */
 #team {
   padding: 100px 0;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; /* Este valor puede ser row dependiendo de cómo quieras organizar los elementos */
 }
+
 #team h4 {
   margin: 5px 0;
 }
@@ -451,7 +457,7 @@ header .intro-text {
 
 }
 #team .team-img {
-  display: block;
+  display: flexbox;
   margin: 0 auto;
 }
 #team .thumbnail {
