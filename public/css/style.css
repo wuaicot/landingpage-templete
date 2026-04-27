@@ -295,7 +295,9 @@ header .intro-text {
   padding-right: 8px;
 }
 #about img {
-  width: 520px;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
   margin-top: 10px;
   background: #fff;
   border-right: 0;
@@ -353,7 +355,7 @@ header .intro-text {
   padding: 100px 0;
 }
 .portfolio-item {
-  margin: 1px -15px 0 -14px;
+  margin: 15px 0;
   padding: 0;
 }
 .portfolio-item .hover-bg {
@@ -441,23 +443,21 @@ header .intro-text {
 /* Team Section */
 #team {
   padding: 100px 0;
-  
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row; /* Este valor puede ser row dependiendo de cómo quieras organizar los elementos */
+  flex-wrap: wrap;
 }
 
 #team h4 {
   margin: 5px 0;
 }
 #team .team-img {
-  width: 240px;
-  
-
+  width: 100%;
+  max-width: 240px;
+  height: auto;
 }
 #team .team-img {
-  display: flexbox;
   margin: 0 auto;
 }
 #team .thumbnail {
@@ -495,9 +495,10 @@ header .intro-text {
   bottom: 0;
   left: 30px;
 }
+
 #contact h3 {
   color: #fff;
-  margin-top: 80px;
+  margin-top: 40px;
   margin-bottom: 25px;
   padding-bottom: 20px;
   font-weight: 400;
@@ -610,12 +611,49 @@ label {
   border-bottom: 2px solid #608dfd;
 }
 
+/* Media Queries */
+@media (max-width: 991px) {
+  #contact h3 {
+    margin-top: 40px;
+  }
+}
+
 @media (max-width: 768px) {
+  .intro h1 {
+    font-size: 42px;
+  }
+  .intro p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  header .intro-text {
+    padding-top: 200px;
+    padding-bottom: 100px;
+  }
   #about img {
-    margin: 50px 0;
-    
+    margin: 30px auto;
+    display: block;
+  }
+  .section-title {
+    margin-bottom: 40px;
+  }
+  #contact .section-title h2::after {
+    left: 50%;
+    margin-left: -30px;
+  }
+}
 
-
-
+@media (max-width: 480px) {
+  #menu a.navbar-brand {
+    font-size: 18px;
+  }
+  .intro h1 {
+    font-size: 32px;
+  }
+  #services i.fa {
+    width: 100px;
+    height: 100px;
+    padding: 30px 0;
+    font-size: 32px;
   }
 }

@@ -1,132 +1,132 @@
 {
   "Header": {
-    "title": "We are a Landing Page",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sed commodo nibh ante facilisis bibendum."
+    "title": "Soluciones Digitales de Alto Impacto",
+    "paragraph": "Impulsamos tu presencia online con aplicaciones web de última generación. Especialistas en React y arquitecturas escalables diseñadas para el éxito de tu negocio."
   },
   "About": {
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "paragraph": "Soy Naycol Linares, Director de Desarrollo con una visión clara: transformar la complejidad técnica en experiencias de usuario excepcionales. Mi enfoque se centra en la eficiencia, el rendimiento y la entrega de productos que no solo funcionan, sino que destacan en un mercado competitivo. Con años de experiencia en el stack MERN, lidero proyectos que definen el estándar de calidad en la industria digital.",
     "Why": [
-      "Lorem ipsum dolor",
-      "Tempor incididunt",
-      "Lorem ipsum dolor",
-      "Incididunt ut labore"
+      "Arquitecturas modernas y escalables",
+      "Optimización SEO y de rendimiento",
+      "Diseño centrado en la conversión",
+      "Código limpio y fácil de mantener"
     ],
     "Why2": [
-      "Aliquip ex ea commodo",
-      "Lorem ipsum dolor",
-      "Exercitation ullamco",
-      "Lorem ipsum dolor"
+      "Integración de APIs y servicios cloud",
+      "Metodologías ágiles de desarrollo",
+      "Soporte técnico personalizado",
+      "Garantía de calidad y seguridad"
     ]
   },
   "Gallery": [
     {
-      "title": "Project Title",
+      "title": "Sistema CRM Inmobiliario",
       "largeImage": "img/portfolio/01-large.jpg",
       "smallImage": "img/portfolio/01-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Plataforma de E-learning",
       "largeImage": "img/portfolio/02-large.jpg",
       "smallImage": "img/portfolio/02-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Dashboard Analytics Pro",
       "largeImage": "img/portfolio/03-large.jpg",
       "smallImage": "img/portfolio/03-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "E-commerce de Moda Local",
       "largeImage": "img/portfolio/04-large.jpg",
       "smallImage": "img/portfolio/04-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "App de Gestión de Inventarios",
       "largeImage": "img/portfolio/05-large.jpg",
       "smallImage": "img/portfolio/05-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Portal de Noticias Tech",
       "largeImage": "img/portfolio/06-large.jpg",
       "smallImage": "img/portfolio/06-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Sistema de Reservas Online",
       "largeImage": "img/portfolio/07-large.jpg",
       "smallImage": "img/portfolio/07-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "Red Social Corporativa",
       "largeImage": "img/portfolio/08-large.jpg",
       "smallImage": "img/portfolio/08-small.jpg"
     },
     {
-      "title": "Project Title",
+      "title": "App de Finanzas Personales",
       "largeImage": "img/portfolio/09-large.jpg",
       "smallImage": "img/portfolio/09-small.jpg"
     }
   ],
   "Services": [
     {
-      "icon": "fa fa-wordpress",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-code",
+      "name": "Desarrollo Web Fullstack",
+      "text": "Construimos aplicaciones robustas de punta a punta utilizando React, Node.js y bases de datos modernas."
     },
     {
       "icon": "fa fa-cart-arrow-down",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "name": "E-commerce Avanzado",
+      "text": "Tiendas online optimizadas para vender, con pasarelas de pago integradas y paneles de administración intuitivos."
     },
     {
-      "icon": "fa fa-cloud-download",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-cloud",
+      "name": "Soluciones Cloud",
+      "text": "Despliegue y escalabilidad en la nube para que tu aplicación soporte cualquier volumen de tráfico sin interrupciones."
     },
     {
-      "icon": "fa fa-language",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-mobile",
+      "name": "Apps Híbridas",
+      "text": "Desarrollo de aplicaciones móviles que funcionan perfectamente tanto en Android como en iOS desde un solo código."
     },
     {
-      "icon": "fa fa-plane",
-      "name": "Lorem ipsum dolor",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-rocket",
+      "name": "SEO & Performance",
+      "text": "Aseguramos que tu sitio cargue en milisegundos y aparezca en los primeros resultados de búsqueda de Google."
     },
     {
-      "icon": "fa fa-pie-chart",
-      "name": "Consectetur adipiscing",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+      "icon": "fa fa-shield",
+      "name": "Ciberseguridad",
+      "text": "Protegemos tus datos y los de tus clientes con los más altos estándares de seguridad y encriptación."
     }
   ],
   "Testimonials": [
     {
       "img": "img/testimonials/01.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe."
+      "text": "\"Trabajar con Naycol ha sido una de las mejores decisiones para nuestra startup. Su dominio técnico es simplemente impecable.\"",
+      "name": "Andrés Morales - CEO de InnovaTech"
     },
     {
       "img": "img/testimonials/02.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "\"La calidad del código y la velocidad de entrega superaron todas nuestras expectativas iniciales. Altamente recomendado.\"",
+      "name": "Beatriz Luna - Directora de Producto"
     },
     {
       "img": "img/testimonials/03.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "\"Un profesional que entiende el negocio. No solo programa, sino que propone soluciones que aportan valor real.\"",
+      "name": "Ricardo Silva - Fundador de MarketFast"
     },
     {
       "img": "img/testimonials/04.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "\"Excelente comunicación y soporte post-entrega. Se nota la pasión y el compromiso en cada detalle del proyecto.\"",
+      "name": "Elena Vargas - Gerente de Marketing"
     },
     {
       "img": "img/testimonials/05.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "John Doe"
+      "text": "\"Logramos escalar nuestra plataforma a miles de usuarios sin problemas técnicos gracias a la arquitectura que diseñaron.\"",
+      "name": "Juan Castro - CTO en GlobalDev"
     },
     {
       "img": "img/testimonials/06.jpg",
-      "text": "\"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.\"",
-      "name": "Johnathan Doe"
+      "text": "\"La mejor experiencia de desarrollo que hemos tenido. Puntuales, profesionales y con un nivel técnico superior.\"",
+      "name": "Sofía Paredes - Emprendedora Digital"
     }
   ],
   "Team": [
@@ -134,37 +134,51 @@
       "img": "img/team/e-Mi 514x514.jpg",
       "name": "Naycol Rodolfo Linares Villasmil",
       "job": "Director de Desarrollo"
+    },
+    {
+      "img": "img/team/01.jpg",
+      "name": "Alejandro Ruiz",
+      "job": "Lead Frontend Developer"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Valentina Soto",
+      "job": "UI/UX Designer"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "Marcos Herrera",
+      "job": "Backend Architect"
     }
-    
   ],
   "Contact": {
     "address": "Valparaiso, Viña del Mar, Chile",
     "phone": "+56946230876",
     "email": "wuaicot8@gmail.com",
-    "facebook": "",
-    "twitter": "",
+    "facebook": "https://facebook.com/wuaicot",
+    "twitter": "https://twitter.com/wuaicot",
     "github": "https://github.com/wuaicot"
   },
   "Features": [
     {
       "icon": "fa fa-comments-o",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Soporte 24/7",
+      "text": "Estamos siempre disponibles para resolver cualquier duda o inconveniente técnico de manera inmediata."
     },
     {
       "icon": "fa fa-bullhorn",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Marketing Digital",
+      "text": "Integramos herramientas de análisis y marketing para que tu sitio sea una máquina de generar clientes."
     },
     {
       "icon": "fa fa-group",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Equipo Experto",
+      "text": "Contamos con especialistas en cada área del desarrollo para garantizar un resultado de clase mundial."
     },
     {
       "icon": "fa fa-magic",
-      "title": "Lorem ipsum",
-      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+      "title": "Diseño Creativo",
+      "text": "Creamos interfaces únicas que cautivan a tus usuarios y refuerzan la identidad de tu marca."
     }
   ]
 }
