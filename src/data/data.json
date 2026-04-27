@@ -132,18 +132,18 @@
   "Team": [
     {
       "img": "img/team/e-Mi 514x514.jpg",
-      "name": "Naycol R. Linarez Villasmil",
-      "job": "Director"
+      "name": "Naycol Rodolfo Linares Villasmil",
+      "job": "Director de Desarrollo"
     }
     
   ],
   "Contact": {
-    "address": "State, Cyty, Coutry ",
-    "phone": "+12 3456 78 910",
-    "email": "correo@gmail.com",
+    "address": "Valparaiso, Viña del Mar, Chile",
+    "phone": "+56946230876",
+    "email": "wuaicot8@gmail.com",
     "facebook": "",
     "twitter": "",
-    "github": ""
+    "github": "https://github.com/wuaicot"
   },
   "Features": [
     {
