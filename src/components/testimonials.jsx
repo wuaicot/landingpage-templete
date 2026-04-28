@@ -7,14 +7,14 @@ export const Testimonials = (props) => {
         <div className="section-title text-center">
           <h2>Lo que dicen nuestros clientes</h2>
         </div>
-        <div className="row">
+        <div className="row" style={{ display: 'flex', flexWrap: 'wrap' }}>
           {props.data
             ? props.data.map((d, i) => (
-                <div key={`${d.name}-${i}`} className="col-md-4">
-                  <div className="testimonial">
+                <div key={`${d.name}-${i}`} className="col-sm-6 col-md-6 col-lg-4">
+                  <div className="testimonial" style={{ marginBottom: '30px', height: '100%' }}>
                     <div className="testimonial-image">
                       {" "}
-                      <img src={d.img} alt="" />{" "}
+                      <img src={d.img} alt={d.name} />{" "}
                     </div>
                     <div className="testimonial-content">
                       <p>"{d.text}"</p>
@@ -23,7 +23,7 @@ export const Testimonials = (props) => {
                   </div>
                 </div>
               ))
-            : "loading"}
+            : "cargando..."}
         </div>
       </div>
     </div>

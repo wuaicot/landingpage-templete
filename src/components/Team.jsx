@@ -10,21 +10,21 @@ export const Team = (props) => {
             Profesionales comprometidos con la excelencia técnica y la innovación constante en cada proyecto.
           </p>
         </div>
-        <div id="row">
+        <div className="row">
           {props.data
             ? props.data.map((d, i) => (
-                <div key={`${d.name}-${i}`} className="col-md-3 col-sm-6 col-lg-9  team  ">
-                  <div className="thumbnail ">
+                <div key={`${d.name}-${i}`} className="col-md-6 col-sm-6">
+                  <div className="thumbnail">
                     {" "}
-                    <img src={d.img} alt={`Naycol Linares Team - ${d.name} - ${d.job}`} className="team-img    " />
-                    <div className="caption ">
+                    <img src={d.img} alt={`Naycol Linares Team - ${d.name} - ${d.job}`} className="team-img" />
+                    <div className="caption">
                       <h4>{d.name}</h4>
                       <p>{d.job}</p>
                     </div>
                   </div>
                 </div>
               ))
-            : "loading"}
+            : "cargando..."}
         </div>
       </div>
     </div>
