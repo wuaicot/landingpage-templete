@@ -13,7 +13,7 @@ export const Team = (props) => {
         <div className="row">
           {props.data
             ? props.data.map((d, i) => (
-                <div key={`${d.name}-${i}`} className="col-md-6 col-sm-6">
+                <div key={`${d.name}-${i}`} className="col-lg-3 col-md-6 col-sm-6">
                   <div className="thumbnail">
                     {" "}
                     <img src={d.img} alt={`Naycol Linares Team - ${d.name} - ${d.job}`} className="team-img" />
