@@ -24,6 +24,13 @@ Change the data in the ```data.json``` file as well as add any images to ```publ
 You can also change styles by modifying the ```public/css``` files.
 If you need the contact form to work, you also need to create an EmailJS account, and modify the ```src/components/contact.jsx``` file to replace your own service ID, template ID and Public Key
 
+### 4. Chatbot Backend Setup (Python)
+Para que el chatbot funcione, debes ejecutar el servidor de Python:
+1. Ve a la carpeta del backend: `cd backend`
+2. Instala las dependencias: `pip install -r requirements.txt`
+3. Ejecuta el servidor: `python main.py`
+El servidor correrá en `http://localhost:8000`. Asegúrate de que esté activo para que el componente de chat en la web pueda responder.
+
 ## Like this project?
 <a href="https://www.buymeacoffee.com/issaaf">Buy my a coffee ☕️</a>
 

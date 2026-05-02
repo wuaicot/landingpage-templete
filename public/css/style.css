@@ -210,8 +210,8 @@ a:focus,
   background-color: #e5e5e5;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-size: cover;
   -o-background-size: cover;
+  background-size: cover;
 }
 .intro .overlay {
   background: rgba(0, 0, 0, 0.2);
@@ -250,7 +250,7 @@ header .intro-text {
   font-size: 38px;
   margin-bottom: 20px;
   transition: all 0.5s;
-  color: #fff;
+  color: #ffffff;
   width: 100px;
   height: 100px;
   padding: 30px 0;
