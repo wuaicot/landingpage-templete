@@ -19,19 +19,37 @@ export const Contact = (props) => {
   
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(name, email, message);
     
-    /* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ 
+    const serviceID = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+    const templateID = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+    const autoReplyTemplateID = process.env.REACT_APP_EMAILJS_AUTOREPLY_TEMPLATE_ID;
+    const publicKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceID || !templateID || !publicKey) {
+      console.error("Error: Faltan variables de entorno de EmailJS.");
+      alert("Error de configuración.");
+      return;
+    }
     
-    emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
+    // Enviamos ambos correos (Aviso a Naycol y Auto-respuesta al cliente)
+    const sendNotification = emailjs.sendForm(serviceID, templateID, e.target, publicKey);
+    
+    // La auto-respuesta es opcional si está configurada en el .env
+    const promises = [sendNotification];
+    if (autoReplyTemplateID) {
+      promises.push(emailjs.sendForm(serviceID, autoReplyTemplateID, e.target, publicKey));
+    }
+
+    Promise.all(promises)
       .then(
-        (result) => {
-          console.log(result.text);
+        (results) => {
+          console.log("SUCCESS!", results[0].text);
+          alert("¡Mensaje enviado con éxito! Revisa tu bandeja de entrada.");
           clearState();
         },
         (error) => {
-          console.log(error.text);
+          console.log("FAILED...", error.text);
+          alert("Error al enviar el mensaje: " + error.text);
         }
       );
   };
