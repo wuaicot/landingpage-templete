@@ -76,6 +76,18 @@ export const Chatbot = () => {
     }
   };
 
+  const renderMessage = (text) => {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+    const parts = text.split(urlRegex);
+    return parts.map((part, index) => 
+      urlRegex.test(part) ? (
+        <a key={index} href={part} target="_blank" rel="noopener noreferrer" className="chat-link">
+          {part}
+        </a>
+      ) : part
+    );
+  };
+
   return (
     <div className="chatbot-container">
       {!isOpen && (
@@ -100,7 +112,7 @@ export const Chatbot = () => {
             {messages.map((msg, index) => (
               <div key={index} className={`message-wrapper ${msg.sender}`}>
                 <div className={`message ${msg.sender}`}>
-                  {msg.text}
+                  {renderMessage(msg.text)}
                 </div>
                 <div className="message-time">{msg.time}</div>
               </div>

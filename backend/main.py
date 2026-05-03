@@ -51,8 +51,8 @@ KNOWLEDGE_BASE = {
         "response": "Naycol ofrece servicios de: 1. Desarrollo Fullstack de alto nivel (MERN). 2. Arquitectura de Software escalable. 3. Auditoría de rendimiento web (Core Web Vitals). 4. Mentoría y liderazgo de equipos técnicos. 5. Transformación digital para empresas."
     },
     "contacto": {
-        "keywords": ["contacto", "cita", "presupuesto", "contratar", "reunion", "correo", "email", "telefono", "numero", "whatsapp", "celular", "llamar", "agenda"],
-        "response": "Para agendar una llamada técnica, solicitar un presupuesto o hablar sobre una colaboración, lo ideal es usar el formulario de contacto al final de esta página. Naycol revisa cada mensaje personalmente y responde en menos de 24 horas."
+        "keywords": ["contacto", "cita", "presupuesto", "contratar", "reunion", "correo", "email", "telefono", "numero", "whatsapp", "celular", "llamar", "agenda", "portafolio", "sitio", "web"],
+        "response": "Puedes contactar a Naycol directamente al +56946230876. También te invito a visitar su portafolio detallado en: https://mi-portafolio-full-stack.vercel.app. Para consultas formales, puedes usar el formulario al final de esta página."
     },
     "proyectos_especificos": {
         "keywords": ["proyectos", "portfolio", "trabajos", "inventario", "sistema", "negocio", "empresa", "software", "aplicacion", "app", "tienda", "e-commerce", "automatizar"],
