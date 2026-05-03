@@ -6,13 +6,21 @@ from typing import List, Optional
 from thefuzz import fuzz, process
 from dotenv import load_dotenv
 
+import json
+
 # Cargar variables de entorno
 load_dotenv()
 
 app = FastAPI()
 
-# Configurar CORS desde variables de entorno
-origins = eval(os.getenv("CORS_ORIGINS", '["http://localhost:3000"]'))
+# Configurar CORS de forma robusta
+cors_origins_raw = os.getenv("CORS_ORIGINS", '["http://localhost:3000"]')
+try:
+    # Intenta cargarlo como JSON (ej: ["url1", "url2"])
+    origins = json.loads(cors_origins_raw)
+except json.JSONDecodeError:
+    # Si falla, asume que es una lista separada por comas (ej: url1, url2)
+    origins = [o.strip() for o in cors_origins_raw.split(",")]
 
 app.add_middleware(
     CORSMiddleware,
