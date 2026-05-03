@@ -52,7 +52,7 @@ KNOWLEDGE_BASE = {
     },
     "contacto": {
         "keywords": ["contacto", "cita", "presupuesto", "contratar", "reunion", "correo", "email", "telefono", "numero", "whatsapp", "celular", "llamar", "agenda"],
-        "response": "Para agendar una llamada técnica, solicitar un presupuesto o hablar sobre una vacante, lo ideal es usar el formulario de contacto al final de esta página o escribir directamente a wuaicot8@gmail.com. Naycol responde personalmente en menos de 24 horas."
+        "response": "Para agendar una llamada técnica, solicitar un presupuesto o hablar sobre una colaboración, lo ideal es usar el formulario de contacto al final de esta página. Naycol revisa cada mensaje personalmente y responde en menos de 24 horas."
     },
     "proyectos_especificos": {
         "keywords": ["proyectos", "portfolio", "trabajos", "inventario", "sistema", "negocio", "empresa", "software", "aplicacion", "app", "tienda", "e-commerce", "automatizar"],

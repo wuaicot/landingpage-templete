@@ -48,22 +48,31 @@ export const Chatbot = () => {
       if (!response.ok) throw new Error('Error en el servidor');
 
       const data = await response.json();
-      setMessages((prev) => [...prev, { 
-        text: data.response, 
-        sender: 'bot',
-        time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-      }]);
-    } catch (error) {
-      setMessages((prev) => [
-        ...prev,
-        { 
-          text: 'Lo siento, no puedo conectarme con el servidor de Naycol en este momento.', 
+      
+      // Simular tiempo de "pensamiento" basado en la longitud de la respuesta
+      const thinkingTime = Math.min(Math.max(data.response.length * 15, 800), 2500);
+      
+      setTimeout(() => {
+        setMessages((prev) => [...prev, { 
+          text: data.response, 
           sender: 'bot',
           time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
-        }
-      ]);
-    } finally {
-      setIsLoading(false);
+        }]);
+        setIsLoading(false);
+      }, thinkingTime);
+
+    } catch (error) {
+      setTimeout(() => {
+        setMessages((prev) => [
+          ...prev,
+          { 
+            text: 'Lo siento, no puedo conectarme con el servidor de Naycol en este momento.', 
+            sender: 'bot',
+            time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+          }
+        ]);
+        setIsLoading(false);
+      }, 1000);
     }
   };
 
