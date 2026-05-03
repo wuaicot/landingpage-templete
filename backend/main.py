@@ -36,59 +36,79 @@ class ChatMessage(BaseModel):
 class ChatResponse(BaseModel):
     response: str
 
-# Base de conocimiento personalizada de Naycol Linares
+# Base de conocimiento enriquecida de Naycol Linares
 KNOWLEDGE_BASE = {
     "saludo": {
-        "keywords": ["hola", "buenos dias", "buenas tardes", "hey", "saludos", "que tal"],
-        "response": "¡Hola! Un gusto saludarte. Soy el asistente de Naycol Linares. ¿Te interesa saber sobre sus proyectos, servicios o quizás quieres saber cómo puede ayudar a escalar tu equipo técnico?"
+        "keywords": ["hola", "buenos dias", "buenas tardes", "buenas noches", "hey", "saludos", "que tal", "como vas", "habla", "que onda"],
+        "response": "¡Hola! Un gusto saludarte. Soy el asistente virtual de Naycol Linares. ¿Te gustaría conocer su trayectoria, los servicios que ofrece para escalar negocios o cómo contactarlo directamente?"
     },
     "perfil": {
-        "keywords": ["quien eres", "naycol", "experiencia", "director", "perfil", "quien es", "trayectoria", "sobre ti"],
-        "response": "Naycol Linares es Director de Desarrollo y experto en React. Se especializa en crear arquitecturas escalables y soluciones digitales de alto impacto. Actualmente lidera equipos técnicos enfocados en la excelencia y el rendimiento."
+        "keywords": ["quien eres", "naycol", "linares", "experiencia", "director", "perfil", "quien es", "trayectoria", "sobre ti", "cv", "resumen"],
+        "response": "Naycol Linares es Director de Desarrollo y experto en React. Se especializa en crear arquitecturas escalables y soluciones digitales de alto impacto. Ha liderado equipos técnicos internacionales enfocados en la excelencia, el rendimiento y la innovación tecnológica."
     },
     "servicios": {
-        "keywords": ["servicios", "que haces", "trabajo", "desarrollo", "react", "consultoria", "arquitectura", "web", "programacion"],
-        "response": "Naycol se especializa en: 1. Desarrollo Fullstack con MERN (MongoDB, Express, React, Node). 2. Arquitectura de Software escalable. 3. Liderazgo técnico de equipos. 4. Optimización de rendimiento web."
+        "keywords": ["servicios", "que haces", "trabajo", "desarrollo", "react", "consultoria", "arquitectura", "web", "programacion", "apps", "software"],
+        "response": "Naycol ofrece servicios de: 1. Desarrollo Fullstack de alto nivel (MERN). 2. Arquitectura de Software escalable. 3. Auditoría de rendimiento web (Core Web Vitals). 4. Mentoría y liderazgo de equipos técnicos. 5. Transformación digital para empresas."
     },
     "contacto": {
-        "keywords": ["contacto", "cita", "presupuesto", "contratar", "reunion", "correo", "email", "telefono", "numero", "whatsapp", "celular", "llamar"],
-        "response": "Para agendar una cita, solicitar un presupuesto o hablar sobre una colaboración, te recomiendo usar el formulario de contacto al final de esta página. Naycol revisa cada mensaje personalmente para darte la mejor atención."
+        "keywords": ["contacto", "cita", "presupuesto", "contratar", "reunion", "correo", "email", "telefono", "numero", "whatsapp", "celular", "llamar", "agenda"],
+        "response": "Para agendar una llamada técnica, solicitar un presupuesto o hablar sobre una vacante, lo ideal es usar el formulario de contacto al final de esta página o escribir directamente a wuaicot8@gmail.com. Naycol responde personalmente en menos de 24 horas."
     },
     "proyectos_especificos": {
-        "keywords": ["inventario", "sistema", "negocio", "empresa", "software", "aplicacion", "app", "tienda", "e-commerce", "automatizar"],
-        "response": "¡Esa es precisamente la especialidad de Naycol! Desarrollar soluciones a medida como sistemas de inventario, plataformas de e-commerce o automatización de procesos para negocios. Si me das más detalles por el formulario de contacto, él podrá asesorarte mejor."
+        "keywords": ["proyectos", "portfolio", "trabajos", "inventario", "sistema", "negocio", "empresa", "software", "aplicacion", "app", "tienda", "e-commerce", "automatizar"],
+        "response": "Naycol ha desarrollado desde sistemas CRM inmobiliarios hasta plataformas de e-learning y dashboards analíticos complejos. Su especialidad es automatizar procesos de negocio mediante software a medida. Puedes ver ejemplos en la sección de 'Galería' de esta página."
     },
     "tecnologias": {
-        "keywords": ["stack", "tecnologias", "lenguajes", "programacion", "python", "javascript", "mern", "aws", "backend", "frontend"],
-        "response": "El stack principal de Naycol es JavaScript (React/Node.js), pero domina Python, bases de datos SQL/NoSQL y despliegues en la nube con AWS y Azure."
+        "keywords": ["stack", "tecnologias", "lenguajes", "programacion", "python", "javascript", "mern", "aws", "backend", "frontend", "typescript", "node", "fastapi", "sql", "mongodb"],
+        "response": "Su stack principal es JavaScript/TypeScript (React, Node.js, Next.js). En el backend domina Python (FastAPI/Django) y tiene amplia experiencia en infraestructuras cloud (AWS/Azure) y bases de datos tanto SQL como NoSQL."
+    },
+    "agradecimiento": {
+        "keywords": ["gracias", "muchas gracias", "agradecido", "perfecto", "buena onda", "vale", "ok", "entendido", "genial", "super"],
+        "response": "¡De nada! Es un placer ayudarte. Si tienes más dudas sobre el trabajo de Naycol o quieres iniciar un proyecto, aquí estaré. ¿Hay algo más que te gustaría saber?"
+    },
+    "despedida": {
+        "keywords": ["adios", "chao", "hasta luego", "nos vemos", "bye", "hasta pronto", "me voy"],
+        "response": "¡Hasta luego! Gracias por visitar el portafolio de Naycol. ¡Que tengas un excelente día!"
+    },
+    "estado": {
+        "keywords": ["estas", "disponible", "ocupado", "vives", "donde estas", "ubicacion", "chile", "valparaiso", "vina del mar"],
+        "response": "¡Aquí estoy! Siempre listo para responder tus dudas. Físicamente, Naycol reside en Viña del Mar, Chile, pero trabaja con clientes y equipos de todo el mundo de forma remota."
     },
     "ayuda": {
-        "keywords": ["no se que preguntar", "ayuda", "opciones", "que puedes hacer", "que preguntar"],
-        "response": "Puedo contarte sobre la trayectoria de Naycol, detallarte sus servicios técnicos, o explicarte cómo contactarlo para iniciar un proyecto. ¿Por dónde te gustaría empezar?"
+        "keywords": ["ayuda", "opciones", "que preguntar", "que sabes hacer", "help", "no se"],
+        "response": "Puedo hablarte sobre la experiencia de Naycol, detallar su stack tecnológico, explicarte sus servicios de consultoría o indicarte cómo agendar una reunión con él. ¿Qué te interesa más?"
     }
 }
 
 def get_chatbot_response(user_message: str) -> str:
     user_message = user_message.lower().strip()
     
+    # Manejo rápido de agradecimientos cortos
+    if user_message in ["gracias", "vale", "ok", "listo"]:
+        return KNOWLEDGE_BASE["agradecimiento"]["response"]
+
+    # Manejo rápido de saludos cortos
+    if user_message in ["hola", "hey", "buenas"]:
+        return KNOWLEDGE_BASE["saludo"]["response"]
+
     best_match = None
     highest_score = 0
     
-    # Buscamos la mejor coincidencia usando lógica difusa (fuzzy logic)
+    # Buscamos la mejor coincidencia usando lógica difusa
     for category, content in KNOWLEDGE_BASE.items():
-        # Comparamos el mensaje del usuario con cada palabra clave de la categoría
+        # Usamos ratio de conjunto de tokens para manejar frases desordenadas
         match_info = process.extractOne(user_message, content["keywords"], scorer=fuzz.token_set_ratio)
         
         if match_info and match_info[1] > highest_score:
             highest_score = match_info[1]
             best_match = category
 
-    # Si la confianza es mayor al 60%, respondemos con esa categoría
-    if highest_score > 60:
+    # Si la confianza es alta, respondemos con esa categoría
+    if highest_score > 65:
         return KNOWLEDGE_BASE[best_match]["response"]
     
-    # Respuesta inteligente por defecto
-    return "Esa es una buena pregunta. Como asistente de Naycol, trato de ser preciso. Si buscas algo muy técnico o una propuesta comercial, lo ideal es que uses el formulario de contacto para que él mismo te responda con el detalle que mereces. ¿Te gustaría saber algo más sobre su trayectoria?"
+    # Respuesta inteligente por defecto (si no entiende nada)
+    return "Entiendo. Esa es una consulta interesante. Como asistente enfocado en el perfil profesional de Naycol, puedo contarte sobre sus servicios en React, su experiencia como Director de Desarrollo o cómo contactarlo. ¿Te gustaría profundizar en alguno de estos temas?"
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(chat_message: ChatMessage):
