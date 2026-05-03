@@ -52,7 +52,7 @@ KNOWLEDGE_BASE = {
     },
     "contacto": {
         "keywords": ["contacto", "cita", "presupuesto", "contratar", "reunion", "correo", "email", "telefono", "numero", "whatsapp", "celular", "llamar", "agenda", "portafolio", "sitio", "web"],
-        "response": "Puedes contactar a Naycol directamente al +56946230876. También te invito a visitar su portafolio detallado en: https://mi-portafolio-full-stack.vercel.app. Para consultas formales, puedes usar el formulario al final de esta página."
+        "response": "Puedes contactar a Naycol directamente al +56946230876 También te invito a visitar su portafolio detallado en: https://mi-portafolio-full-stack.vercel.app. Para consultas formales, puedes usar el formulario al final de esta página."
     },
     "proyectos_especificos": {
         "keywords": ["proyectos", "portfolio", "trabajos", "inventario", "sistema", "negocio", "empresa", "software", "aplicacion", "app", "tienda", "e-commerce", "automatizar"],
