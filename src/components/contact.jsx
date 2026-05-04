@@ -88,7 +88,7 @@ export const Contact = (props) => {
                         id="email"
                         name="email"
                         className="form-control"
-                        placeholder="Su e-mail"
+                        placeholder="su email"
                         required
                         onChange={handleChange}
                       />
