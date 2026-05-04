@@ -30,6 +30,6 @@ export const Gallery = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
