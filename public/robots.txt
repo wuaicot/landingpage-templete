@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wuaicot.github.io/landingpage-templete/sitemap.xml
+Sitemap: https://desarrollos-wuaicot.vercel.app/sitemap.xml
