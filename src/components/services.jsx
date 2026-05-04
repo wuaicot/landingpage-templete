@@ -2,12 +2,12 @@ import React from "react";
 
 export const Services = (props) => {
   return (
-    <div id="services" className="text-center">
+    <section id="services" className="text-center">
       <div className="container">
         <div className="section-title">
-          <h2>Nuestros Servicios</h2>
+          <h2>Servicios de Desarrollo de Software de Alto Nivel</h2>
           <p>
-            Ofrecemos soluciones integrales de desarrollo web diseñadas para escalar su negocio y mejorar su presencia digital.
+            Soluciones integrales de desarrollo web diseñadas para escalar su negocio y dominar el mercado digital.
           </p>
         </div>
         <div className="row">
@@ -25,6 +25,6 @@ export const Services = (props) => {
             : "loading"}
         </div>
       </div>
-    </div>
+    </section>
   );
 };

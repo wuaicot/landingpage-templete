@@ -2,12 +2,12 @@ import React from "react";
 
 export const About = (props) => {
   return (
-    <div id="about">
+    <section id="about">
       <div className="container">
         <div className="row">
           <div className="col-xs-12 col-md-6">
             {" "}
-            <img src="img/about.jpg" className="img-responsive" alt="" />{" "}
+            <img src="img/about.jpg" className="img-responsive" alt="Naycol Linares - Equipo de Desarrollo Fullstack en acción" />{" "}
           </div>
           <div className="col-xs-12 col-md-6">
             <div className="about-text">
@@ -38,6 +38,6 @@ export const About = (props) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

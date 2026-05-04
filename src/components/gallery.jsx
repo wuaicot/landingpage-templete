@@ -3,12 +3,12 @@ import React from "react";
 
 export const Gallery = (props) => {
   return (
-    <div id="portfolio" className="text-center">
+    <section id="portfolio" className="text-center">
       <div className="container">
         <div className="section-title">
-          <h2>Portafolio</h2>
+          <h2>Portafolio de Proyectos Digitales</h2>
           <p>
-            Una muestra de los proyectos más recientes donde hemos aplicado arquitectura moderna y diseño centrado en el usuario.
+            Una muestra de casos de éxito donde hemos transformado ideas en plataformas robustas y escalables.
           </p>
         </div>
         <div className="row">
