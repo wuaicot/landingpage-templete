@@ -13,22 +13,45 @@ load_dotenv()
 
 app = FastAPI()
 
-# Configurar CORS de forma robusta
-cors_origins_raw = os.getenv("CORS_ORIGINS", '["http://localhost:3000"]')
-try:
-    # Intenta cargarlo como JSON (ej: ["url1", "url2"])
-    origins = json.loads(cors_origins_raw)
-except json.JSONDecodeError:
-    # Si falla, asume que es una lista separada por comas (ej: url1, url2)
-    origins = [o.strip() for o in cors_origins_raw.split(",")]
+# Configurar CORS de forma muy permisiva para producción y desarrollo
+cors_origins_raw = os.getenv("CORS_ORIGINS", "")
+origins = [
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "http://localhost:8000",
+    "https://desarrollos-wuaicot.vercel.app",
+]
+
+if cors_origins_raw:
+    try:
+        # Intenta cargarlo como JSON (ej: ["url1", "url2"])
+        extra_origins = json.loads(cors_origins_raw)
+        if isinstance(extra_origins, list):
+            origins.extend(extra_origins)
+        else:
+            origins.append(str(extra_origins))
+    except json.JSONDecodeError:
+        # Si falla, asume que es una lista separada por comas (ej: url1, url2)
+        origins.extend([o.strip() for o in cors_origins_raw.split(",") if o.strip()])
+
+# Eliminar duplicados
+origins = list(set(origins))
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/health")
+async def health():
+    return {
+        "status": "online",
+        "origins_configured": origins,
+        "env_var_present": bool(cors_origins_raw)
+    }
 
 class ChatMessage(BaseModel):
     message: str
