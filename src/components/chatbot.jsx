@@ -14,6 +14,17 @@ export const Chatbot = () => {
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef(null);
 
+  const toggleChat = () => {
+    const newStatus = !isOpen;
+    setIsOpen(newStatus);
+    if (newStatus && typeof window.gtag === 'function') {
+      window.gtag('event', 'chat_opened', {
+        'event_category': 'Engagement',
+        'event_label': 'Chatbot Asistente'
+      });
+    }
+  };
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -27,6 +38,14 @@ export const Chatbot = () => {
   const handleSend = async (e) => {
     e.preventDefault();
     if (!input.trim()) return;
+
+    // Rastrear envío de mensaje en Google Analytics
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'chat_message_sent', {
+        'event_category': 'Engagement',
+        'event_label': 'Usuario envió mensaje'
+      });
+    }
 
     const currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     const userMessage = { text: input, sender: 'user', time: currentTime };
@@ -91,7 +110,7 @@ export const Chatbot = () => {
   return (
     <div className="chatbot-container">
       {!isOpen && (
-        <button className="chatbot-button" onClick={() => setIsOpen(true)}>
+        <button className="chatbot-button" onClick={toggleChat}>
           <i className="fa fa-comments"></i>
         </button>
       )}
@@ -103,7 +122,7 @@ export const Chatbot = () => {
               <div className="status-dot"></div>
               <h3>Asistente de Naycol</h3>
             </div>
-            <button className="chatbot-close" onClick={() => setIsOpen(false)}>
+            <button className="chatbot-close" onClick={toggleChat}>
               <i className="fa fa-times"></i>
             </button>
           </div>

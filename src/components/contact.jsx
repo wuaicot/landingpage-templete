@@ -44,6 +44,15 @@ export const Contact = (props) => {
       .then(
         (results) => {
           console.log("SUCCESS!", results[0].text);
+          
+          // Rastrear conversión en Google Analytics
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', 'contact_form_sent', {
+              'event_category': 'Conversion',
+              'event_label': 'Formulario de Contacto Principal'
+            });
+          }
+
           alert("¡Mensaje enviado con éxito! Revisa tu bandeja de entrada.");
           clearState();
         },
